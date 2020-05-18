@@ -1,0 +1,39 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka
+
+spring:
+  profiles: test
+  redis:
+    database: 0
+    host: 39.105.193.132
+    port: 6379
+    password: "^&ASFHGGmnAASF2254=_"
+    timeout: 6000ms
+    lettuce:
+      pool:
+        max-active: 1
+        max-wait: -1ms
+        max-idle: 1
+        min-idle: 0
+        time-between-eviction-runs: 60000ms
+  datasource:
+    url: jdbc:oracle:thin:@39.98.196.221:1521:helowin
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    username: zwebproduct
+    password: zwebproduct
+    hikari:
+      minimum-idle: 0
+      maximum-pool-size: 1
+      auto-commit: false
+      idle-timeout: 50000
+      pool-name: DatebookHikariCP
+      max-lifetime: 90000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1 from dual
+filepath:
+  upload: d://zweb
+  upload.temp: d://zweb
+  download: d://zweb
+  template: D://haishi//zweb-file//template//
